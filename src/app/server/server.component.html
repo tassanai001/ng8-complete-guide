@@ -1,0 +1,8 @@
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button class="btn btn-primary" (click)="onResetServerName()" [disabled]="serverName === ''">Reset</button>
+
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="getClass()">{{ serverStatus1 }}</p>
+
+<p *ngFor="let serverList of serverLists" [ngStyle]="{backgroundColor: getColor()}" [ngClass]="getClass()">
+    {{ serverList }}</p>
